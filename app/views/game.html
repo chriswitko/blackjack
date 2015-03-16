@@ -1,0 +1,20 @@
+<div class="container p10 ac">
+  <a href="#/" class="logo"><h2 class="m0"><img src="images/logo.jpg" height="50" alt="BlackJack"/> BlackJack</h2></a>
+</div>
+<div class="container-wide deck">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-9 pl0">
+        <div class="clearfix game p10">
+          <div class="alert alert-danger p10" ng-show="!isValidGame()">
+            <p>Sorry. This game is over. Click <a href="#/">here</a> to start again.</p>
+          </div>
+          <player player="player" ng-class="{dealer: player.role=='Dealer', done: player.hasDone()}" ng-repeat="player in players track by $index"></player>
+        </div>
+      </div>
+      <div class="col-xs-3 pl0">
+        <activity></activity>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+<div class="clearfix hand">
+  <div class="clearfix cards mb10">
+    <ul class="list-unstyled list-inline">
+      <li ng-repeat="card in player.cards track by $index">
+        <card card="card"></card>
+      </li>
+    </ul>
+  </div>
+  <div class="clearfix toolbar" ng-show="player.getRole()=='Player'&&!player.hasDone()" ng-cloak>
+    <ul class="list-unstyled list-inline m0" ng-show="player.getBid()">
+      <li>
+        <button class="btn btn-default btn-sm" ng-click="action('hit', player)" ng-class="{'btn-primary':player.getAction()=='hit'}" ng-disabled="player.getAction()">Hit</button>
+      </li>
+      <li>
+        <button class="btn btn-default btn-sm" ng-click="action('stand', player)" ng-class="{'btn-primary':player.action=='stand'}" ng-disabled="player.getAction()">Stand</button>
+      </li>
+      <li>
+        <button class="btn btn-default btn-sm" ng-click="player.split()" ng-class="{'btn-primary':player.action=='split'}" ng-disabled="player.getAction()">Split</button>
+      </li>
+    </ul>
+    <ul class="list-unstyled list-inline m0" ng-show="!player.getBid()" ng-cloak>
+      <li>
+        <button class="btn btn-default btn-sm" ng-click="bid(10, player)">&pound;10</button>
+      </li>
+      <li>
+        <button class="btn btn-default btn-sm" ng-click="bid(20, player)">&pound;20</button>
+      </li>
+      <li>
+        <button class="btn btn-default btn-sm" ng-click="bid(50, player)">&pound;50</button>
+      </li>
+    </ul>
+  </div>
+</div>

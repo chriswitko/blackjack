@@ -1,0 +1,22 @@
+<div class="container dialog">
+  <div class="jumbotron mt50">
+    <h1>Join the game!</h1>
+    <p class="lead">
+      Enter Players name:
+    </p>
+    <div class="clearfix">
+      <table class="table table-bordered">
+        <tr ng-repeat="player in players | filter:{role:'Player'} track by $index">
+          <td><input class="form-control" type="text" ng-model="player.name" placeholder="Enter player name"/></td>
+        </tr>
+        <tr ng-show="!hasMaxReached">
+          <td><button ng-click="add()" class="btn-link">Add more players...</button></td>
+        </tr>
+        <tr ng-show="hasMaxReached">
+          <td>Max number of players has been reached</td>
+        </tr>
+      </table>
+    </div>
+    <p><a class="btn btn-lg btn-success" ng-href="#/game">Start Game! <span class="glyphicon glyphicon-ok"></span></a></p>
+  </div>
+</div>

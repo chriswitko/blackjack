@@ -1,0 +1,16 @@
+<div class="clearfix player p10">
+  <div class="clearfix header">
+    <div class="pull-left">
+      <h4 class="m0">{{player.name}}</h4>
+    </div>
+    <div class="pull-right">
+      <ul class="list-unstyled list-inline list-numbers">
+        <li ng-bind="player.getPoints()+' points'"></li>
+        <li ng-show="player.getRole()=='Player'" ng-cloak>Bid: &pound;{{player.getBid()}}</li>
+        <li ng-show="player.getRole()=='Player'" ng-cloak>Wallet: &pound;{{player.getWallet()}}</li>
+        <li class="blink-me" ng-show="player.getRole()=='Dealer'&&isValidGame()">WAITING FOR ALL PLAYERS</li>
+      </ul>
+    </div>
+  </div>
+  <hand player="player"></hand>
+</div>

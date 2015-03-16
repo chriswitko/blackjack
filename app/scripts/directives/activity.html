@@ -1,0 +1,6 @@
+<div class="clearfix sidebar">
+  <h4 class"m0">Latest Activity</h4>
+  <ul class="list-unstyled">
+    <li ng-repeat="activity in activities track by $index">&rarr; <u>{{activity.player.getName()}}</u> {{activity.title}}</li>
+  </ul>
+</div>

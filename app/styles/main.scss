@@ -1,0 +1,202 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+// bower:scss
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+body {
+  padding: 0;
+}
+
+button:focus {outline:0!important;}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+  /*border-bottom: 1px solid #e5e5e5;*/
+  /*margin-bottom: 10px;*/
+
+  /* Make the masthead heading the same height as the navigation */
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+    padding-bottom: 19px;
+  }
+}
+
+/* Game */
+.mt50 {
+  margin-top: 50px;
+}
+
+.mb10 {
+  margin-bottom: 10px;
+}
+
+.p10 {
+  padding: 10px;
+}
+
+.m0 {
+  margin: 0;
+}
+
+.pl0 {
+  padding-left: 0;
+}
+
+.ac {
+  text-align: center;
+}
+
+.deck {
+  background-color: #000;
+}
+
+h1.logo {
+  span {
+    background: #000;
+    color: #fff;
+    padding: 0 20px;
+    margin-left: 10px;
+  }
+}
+
+a.logo, a.logo:hover {
+  text-decoration: none;
+  color: #000;
+}
+
+.game {
+  background: #006d34 url(../images/pool_table.png);
+  min-height: 600px;
+  color: #fff;
+
+  .player {
+    background-color: #009558;
+    border-bottom: 1px solid #006d34;
+    margin-bottom: 10px;
+  }
+
+  .done {
+    opacity: 0.8;
+  }
+
+  .dealer {
+    background: #000 url(../images/dark_mosaic.png);
+  }
+}
+
+.sidebar {
+  background-color: #000;
+  color: #fff;
+
+  h4 {
+    border-bottom: 1px solid #fff;
+    padding-bottom: 10px;
+  }
+}
+
+.btn-primary, .btn-primary:hover {
+  background-color: #000;
+  border: 1px solid #a8a8a8;
+}
+
+.list-numbers {
+  color: yellow;
+}
+
+.blink-me {
+  -webkit-animation-name: blinker;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+
+  -moz-animation-name: blinker;
+  -moz-animation-duration: 1s;
+  -moz-animation-timing-function: linear;
+  -moz-animation-iteration-count: infinite;
+
+  animation-name: blinker;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@-moz-keyframes blinker {
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}
+
+@-webkit-keyframes blinker {
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}
+
+@keyframes blinker {
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+
+  .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+  }
+}
+
+.jumbotron-clean {
+  background: #fff;
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+
+  p + h4 {
+    margin-top: 28px;
+  }
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .container {width:100%}
+  .container.dialog {width:768px;}
+  /* Remove the padding we set earlier */
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
